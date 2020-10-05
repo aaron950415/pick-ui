@@ -5,14 +5,14 @@
   >
 </template>
 
-<script>
-import { provide } from "vue";
+<script lang="ts">
+import { provide, ref } from "vue";
 
 export default {
   name: "App",
-  setu() {
+  setup() {
     const asideVisible = ref(false);
-    provide("xx", asideVisible);
+    provide("xxx", asideVisible);
   },
 };
 </script>
