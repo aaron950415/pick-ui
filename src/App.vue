@@ -1,18 +1,22 @@
 <template>
-  <router-view />|<router-link to="/">22222 </router-link>|<router-link
-    to="/doc"
-    >doc</router-link
-  >
+  <router-view />
 </template>
 
 <script lang="ts">
 import { provide, ref } from "vue";
+import { router } from "./router";
 
 export default {
   name: "App",
   setup() {
-    const asideVisible = ref(false);
+    const width = document.documentElement.clientWidth;
+    const asideVisible = ref(width <= 500 ? false : true);
     provide("asideVisible", asideVisible);
+    router.afterEach(() => {
+      if(width <= 500){
+        asideVisible.value=false
+      }
+    });
   },
 };
 </script>
