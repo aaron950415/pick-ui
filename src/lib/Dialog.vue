@@ -1,22 +1,24 @@
 <template >
-  <template v-if="visible">
-    <div class="pick-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="pick-dialog-wrapper">
-      <div class="pick-dialog">
-        <header>
-          <slot name="tittle"></slot>
-          <span class="pick-dialog-close" @click="close"></span>
-        </header>
-        <main>
-          <slot name="content"></slot>
-        </main>
-        <footer>
-          <Button @click="ok" level="main">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+  <Teleport to="body">
+    <template v-if="visible">
+      <div class="pick-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="pick-dialog-wrapper">
+        <div class="pick-dialog">
+          <header>
+            <slot name="tittle"></slot>
+            <span class="pick-dialog-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"></slot>
+          </main>
+          <footer>
+            <Button @click="ok" level="main">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
-  </template>
+    </template>
+  </Teleport>
 </template>
 
 <script lang="ts">
@@ -44,8 +46,9 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit("cancel");
+      if (props.cancel?.()) {
       close();
+      }
     };
     return {
       close,
