@@ -13,7 +13,7 @@
         <h1>标题改</h1>
       </template>
       <template v-slot:content>
-        <p>h1111111111111</p>
+        <p>h1</p>
         <p>h2</p>
       </template>
     </Dialog>
