@@ -1,14 +1,20 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" />
+    <Topnav toggleMenuButtonVisible class="nav" />
     <div class="content">
       <aside v-if="asideVisible">
-        <h2>组件列表</h2>
+        <h2>Document</h2>
         <ol>
-          <li><router-link to="/doc/switch">Swich 组件</router-link></li>
-          <li><router-link to="/doc/button">Button 组件</router-link></li>
-          <li><router-link to="/doc/dialog">Dialog 组件</router-link></li>
-          <li><router-link to="/doc/tabs">Tabs 组件</router-link></li>
+          <li><router-link to="/doc/intro">Introdaution</router-link></li>
+          <li><router-link to="/doc/get-start">GetStart</router-link></li>
+          <li><router-link to="/doc/install">Install</router-link></li>
+        </ol>
+        <h2>Component</h2>
+        <ol>
+          <li><router-link to="/doc/switch">Swich Component</router-link></li>
+          <li><router-link to="/doc/button">Button Component</router-link></li>
+          <li><router-link to="/doc/dialog">Dialog Component</router-link></li>
+          <li><router-link to="/doc/tabs">Tabs Component</router-link></li>
         </ol>
       </aside>
       <main><router-view></router-view></main>
@@ -59,7 +65,7 @@ export default {
 }
 aside {
   background: lightblue;
-  width: 150px;
+  width: 170px;
   padding: 16px;
   position: fixed;
   top: 0;
@@ -75,9 +81,9 @@ aside {
       padding: 4px 0;
     }
   }
-
 }
-    main {
-      overflow: auto;
-    }
+main {
+  margin-left: 20px;
+  overflow: auto;
+}
 </style>

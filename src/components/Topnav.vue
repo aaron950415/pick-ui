@@ -1,21 +1,33 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="pick-icon">
-        <use xlink:href="#icon-caidan"></use>
+        <use xlink:href="#icon-pig"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li><router-link to="/doc">Documnet</router-link></li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <span
+      v-if="toggleMenuButtonVisible"
+      class="toggleAside"
+      @click="toggleMenu"
+    >
+      <svg class="pick-icon">
+        <use xlink:href="#icon-caidan"></use></svg
+    ></span>
   </div>
 </template>
 
 <script lang="ts">
 import { inject, Ref } from "vue";
 export default {
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
     const toggleMenu = () => {
@@ -34,7 +46,7 @@ $color: #007974;
   top: 0px;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   padding: 16px;
   justify-items: center;
@@ -56,13 +68,14 @@ $color: #007974;
   }
   > .toggleAside {
     display: none;
-    width: 24px;
-    height: 24px;
-    background: #1f92c0;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    > svg {
+      width: 32px;
+      height: 32px;
+    }
   }
   @media (max-width: 500px) {
     > .menu {

@@ -12,15 +12,36 @@
       </div>
     </div>
     <div class="features">
-      <svg class="pick-icon">
-        <use xlink:href="#icon-vue"></use>
-      </svg>
-      <svg class="pick-icon">
-        <use xlink:href="#icon-typescript"></use>
-      </svg>
-      <svg class="pick-icon">
-        <use xlink:href="#icon-light"></use>
-      </svg>
+      <ul>
+        <li>
+          <svg class="pick-icon">
+            <use xlink:href="#icon-vue"></use>
+          </svg>
+          <h3>base on Vue 3</h3>
+          <p>used Vue 3 Composition API
+            <br>
+          </p>
+        </li>
+        <li>
+          <svg class="pick-icon">
+            <use xlink:href="#icon-typescript">
+            </use>
+          </svg>
+              <h3>base on TypeScript</h3>
+              <p>The source code is written in TypeScrip
+                <br>
+                
+              </p>
+        </li>
+        <li>
+          <svg class="pick-icon">
+            <use xlink:href="#icon-light">
+            </use>
+          </svg>
+              <h3>Code is easy to read</h3>
+              <p>The source code is extremely concise</p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -40,10 +61,45 @@ $color: #007974;
     rgba(227, 255, 253, 1) 0%,
     rgba(183, 233, 230, 1) 100%
   );
-  .features {
-    > svg {
-      width: 32px;
-      height: 32px;
+  // border-bottom-left-radius: 50% 70px;
+  // border-bottom-right-radius: 50% 70px;
+  clip-path: ellipse(80% 60% at 50% 40%);
+}
+.features {
+  margin: 64px auto;
+  width: 400px;
+  @media (min-width: 800px) {
+    width: 800px;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+  >ul {
+    display: flex;
+    flex-wrap: wrap;
+    >li {
+      width: 400px;
+      margin: 16px 0;
+      display: grid;
+      justify-content: start;
+      align-content: space-between;
+      grid-template-areas:
+        "icon title"
+        "icon text";
+      grid-template-columns: 80px auto;
+      grid-template-rows: 1fr auto;
+      >svg {
+        grid-area: icon;
+        width: 64px;
+        height: 64px;
+      }
+      >h3 {
+        grid-area: title;
+        font-size: 28px;
+      }
+      >p {
+        grid-area: text
+      }
     }
   }
 }
