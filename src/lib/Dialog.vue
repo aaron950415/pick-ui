@@ -41,13 +41,13 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok?.()) {
+      if (props.ok?.()!== false) {
         close();
       }
     };
     const cancel = () => {
-      if (props.cancel?.()) {
-      close();
+      if (props.cancel?.()!== false) {
+        close();
       }
     };
     return {
