@@ -3,7 +3,7 @@
     <div class="topnavAndBanner">
       <Topnav />
       <div class="banner">
-        <h1>topic</h1>
+        <h1>Pick UI for Vue 3</h1>
         <h2>tittle</h2>
         <p class="actions">
           <a href="https://github.com">Github</a>
@@ -67,7 +67,7 @@ $color: #007974;
 }
 .features {
   margin: 64px auto;
-  width: 400px;
+  padding:0 16px;
   @media (min-width: 800px) {
     width: 800px;
   }
@@ -78,7 +78,7 @@ $color: #007974;
     display: flex;
     flex-wrap: wrap;
     >li {
-      width: 400px;
+      width: 300px;
       margin: 16px 0;
       display: grid;
       justify-content: start;

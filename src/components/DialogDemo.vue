@@ -30,16 +30,17 @@ import { ref } from "vue";
 export default {
   components: { Dialog, Button },
   setup() {
-    const x = ref(false);
+    let x = ref(false);
     const toggle = () => {
       x.value = !x.value;
     };
     const fn1 = () => {
-      return false;
+        x.value = !x.value;
+      
     };
-    const fn2 = () => {};
+    const fn2 = () => {x.value = !x.value;};
     const showDialog = () => {
-      openDialog({ tittle: "tittle", content: "dfdf",ok(){console.log("ok")},cancel(){console.log("cancel")},closeOnClickOverlay:true});
+      openDialog({ tittle: "tittle", content: "h1h2",ok(){},cancel(){},closeOnClickOverlay:true});
     };
     return { x, toggle, fn1, fn2, showDialog };
   },
