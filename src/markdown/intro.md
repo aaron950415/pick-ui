@@ -21,7 +21,7 @@ This project is a component library written to learn vue3.0. Using `typescript` 
 [Vue-Router](https://aaron950415.github.io/),
 [Vuex](https://aaron950415.github.io/)
 
-### 打包工具
+### Pack tool
 
 [rollup](https://aaron950415.github.io/)
 
