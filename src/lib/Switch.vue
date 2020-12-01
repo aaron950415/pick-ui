@@ -8,7 +8,7 @@
   </button>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { ref } from "vue";
 export default {
   props: {

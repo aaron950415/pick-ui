@@ -19,7 +19,7 @@
           </svg>
           <h3>base on Vue 3</h3>
           <p>used Vue 3 Composition API
-            <br>
+            
           </p>
         </li>
         <li>
@@ -29,7 +29,6 @@
           </svg>
               <h3>base on TypeScript</h3>
               <p>The source code is written in TypeScrip
-                <br>
                 
               </p>
         </li>
@@ -70,15 +69,25 @@ $color: #007974;
   padding:0 16px;
   @media (min-width: 800px) {
     width: 800px;
+        >ul {
+      >li {
+        width: 50%;
+      }
+    }
   }
   @media (min-width: 1200px) {
     width: 1200px;
+        >ul {
+      >li {
+        width: 33.3333%;
+      }
+    }
   }
   >ul {
     display: flex;
     flex-wrap: wrap;
     >li {
-      width: 300px;
+  
       margin: 16px 0;
       display: grid;
       justify-content: start;
