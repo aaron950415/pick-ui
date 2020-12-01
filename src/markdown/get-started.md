@@ -4,7 +4,7 @@ Please [Install](#/doc/install) this component library first.
 Then write the following code in your code
 
 ```
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button, Tabs, Switch, Dialog} from "pick-ui-aaron"
 ```
 
 You can use the components I provided.
@@ -20,7 +20,7 @@ Code example:
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "pick-ui"
+import {Button, Tabs, Switch, Dialog} from "pick-ui-aaron"
 export default {
   components: {Button}
 }

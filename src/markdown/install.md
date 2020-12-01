@@ -3,13 +3,13 @@
 Open the terminal and run the following commands:
 
 ```
-npm install king-ui
+npm install pick-ui-aaron
 ```
 
 or
 
 ```
-yarn add king-ui
+yarn add pick-ui-aaron
 ```
 
 Next: [Get Started](#/doc/get-started)

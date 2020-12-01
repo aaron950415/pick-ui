@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { computed, onMounted, onUpdated, ref } from "vue";
+import { computed, onMounted, onUpdated, ref, watchEffect } from "vue";
 import Tab from "../lib/Tab.vue";
 export default {
   components: { Tab },
@@ -37,15 +37,17 @@ export default {
     const container = ref<HTMLDivElement>(null);
 
     onMounted(() => {
-      const { width } = selectedItem.value.getBoundingClientRect();
-      indicator.value.style.width = width + "px";
-    });
-    onUpdated(() => {
+      watchEffect(()=>{
+        const { width } = selectedItem.value.getBoundingClientRect();
+        indicator.value.style.width = width + "px";
       const { left: left1 } = container.value.getBoundingClientRect();
       const { left: left2 } = selectedItem.value.getBoundingClientRect();
       const left = left2 - left1;
       indicator.value.style.left = left + "px";
+
+      },{flush:'post'})
     });
+
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
@@ -58,7 +60,7 @@ export default {
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
-    const select = (title: String) => {
+    const select = (title) => {
       context.emit("update:selected", title);
     };
     return {

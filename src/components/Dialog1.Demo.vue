@@ -2,8 +2,7 @@
 Basic Use</demo>
 <template>
   <div>
-
-  <h1>Sample 1</h1>
+    <h1>Sample 1</h1>
     <Button @click="toggle">toggle</Button>
     <Dialog
       v-model:visible="x"
@@ -23,8 +22,7 @@ Basic Use</demo>
 </template>
 
 <script lang="ts">
-import Dialog from "../lib/Dialog.vue";
-import Button from "../lib/Button.vue";
+import { Button, Dialog } from "../lib/index";
 import { ref } from "vue";
 export default {
   components: { Dialog, Button },
@@ -34,11 +32,12 @@ export default {
       x.value = !x.value;
     };
     const fn1 = () => {
-        x.value = !x.value;
-      
+      x.value = !x.value;
     };
-    const fn2 = () => {x.value = !x.value;};
-    return { x, toggle, fn1, fn2,  };
+    const fn2 = () => {
+      x.value = !x.value;
+    };
+    return { x, toggle, fn1, fn2 };
   },
 };
 </script>
