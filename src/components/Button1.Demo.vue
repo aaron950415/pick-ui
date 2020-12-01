@@ -1,13 +1,14 @@
 <demo>
-Normal Use</demo>
+Basic Use
+</demo>
 <template>
   <div>
     <h1>Sample 1</h1>
-  <div>
-    <Button theme="">hello</Button>
-    <Button theme="link">hello</Button>
-    <Button theme="text">hello</Button>
-  </div>
+    <div>
+      <Button theme="">hello</Button>
+      <Button theme="link">hello</Button>
+      <Button theme="text">hello</Button>
+    </div>
   </div>
 </template>
 
@@ -18,5 +19,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+

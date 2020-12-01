@@ -1,26 +1,26 @@
-# 开始使用
-请先[安装](#/doc/install)本组件库。
+# Get Started
+Please [Install](#/doc/install) this component library first.
 
-然后在你的代码中写入下面的代码
+Then write the following code in your code
 
 ```
 import {Button, Tabs, Switch, Dialog} from "king-ui"
 ```
 
-就可以使用我提供的组件了。
+You can use the components I provided.
 
-## Vue 单文件组件
+## Vue single file component
 
-代码示例：
+Code example:
 
 ```
 <template>
   <div>
-    <Button>按钮</Button>
+    <Button>Start</Button>
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import {Button, Tabs, Switch, Dialog} from "pick-ui"
 export default {
   components: {Button}
 }

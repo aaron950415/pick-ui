@@ -6,8 +6,8 @@
         <h2>Document</h2>
         <ol>
           <li><router-link to="/doc/intro">Introdaution</router-link></li>
-          <li><router-link to="/doc/get-started">Get started</router-link></li>
           <li><router-link to="/doc/install">Install</router-link></li>
+          <li><router-link to="/doc/get-started">Get started</router-link></li>
         </ol>
         <h2>Component</h2>
         <ol>

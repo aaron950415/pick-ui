@@ -1,9 +1,28 @@
-# 介绍
+### Project Introduction
+This project is a component library written to learn vue3.0. Using `typescript` and `scss` allows you to quickly learn the new features of vue3. The project is for learning only. (Do not use in a production environment)
+### Important concepts
+     1. Data Responsive
+     2. Componentization
+     3. Compile
+     4. Events, two-way binding, slots
+     5. Cache components, animation (transition)
+     6. Vue-Router
+     9. Vuex
 
-King UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
+### Learning Note
 
-这款组件库其实是我为了总结自己这几年的技术经验而写的，全程亲手编写，尽量不采用第三方库，包括你现在看到的这个官网也几乎都是我自己写的。
+[Vue 3 Note](https://aaron950415.github.io/),
+[Data response](https://aaron950415.github.io/),
+[Componentization](https://aaron950415.github.io/),
+[Compile](https://aaron950415.github.io/),
+[Event, two-way binding, slot](https://aaron950415.github.io/),
+[Cache component](https://aaron950415.github.io/),
+[Animation](https://aaron950415.github.io/),
+[Vue-Router](https://aaron950415.github.io/),
+[Vuex](https://aaron950415.github.io/)
 
-所以如果强烈不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 github.com/frankfang/xxxxxxx，历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例，运行方法见 README.md。
+### 打包工具
 
-下一节：[安装](#/doc/install)
+[rollup](https://aaron950415.github.io/)
+
+Next：[Install](#/doc/install)

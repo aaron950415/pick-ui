@@ -2,7 +2,7 @@
 Support Loading</demo>
 <template>
   <div>
-    <h1> Sample5</h1>
+    <h1>Sample 5</h1>
     <div>
       <Button loading>Loading</Button>
       <Button>Loaded</Button>
@@ -16,6 +16,3 @@ export default {
   components: { Button },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
