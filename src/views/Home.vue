@@ -4,7 +4,7 @@
       <Topnav />
       <div class="banner">
         <h1>Pick UI for Vue 3</h1>
-        <h2>tittle</h2>
+        <h2>Aaron</h2>
         <p class="actions">
           <a href="https://github.com">Github</a>
           <router-link to="/doc">Start</router-link>
