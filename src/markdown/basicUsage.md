@@ -1,4 +1,4 @@
-# Get Started
+# Basic usage
 Please [Install](#/doc/install) this component library first.
 
 Then write the following code in your code

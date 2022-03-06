@@ -1,0 +1,19 @@
+.columns{
+    display:flex;
+    justify-content: space-between;
+    border:1px solid red;
+    
+    @media (min-width: 1200px) {
+        flex-direction:row;
+        > .column{
+            border:1px solid red;
+        }
+      }
+    @media (max-width: 800px) {
+        
+        flex-direction:column;
+        > .column{
+            border:1px solid green;
+        }
+      }
+}

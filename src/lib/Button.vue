@@ -66,6 +66,7 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out($color: #000000, $amount: 0.95);
   transition: background 250ms;
+  margin: 5px;
   & + & {
     margin-left: 8px;
   }

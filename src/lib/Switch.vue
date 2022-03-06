@@ -8,8 +8,7 @@
   </button>
 </template>
 
-<script lang="ts" setup>
-import { ref } from "vue";
+<script lang="ts" >
 export default {
   props: {
     value: Boolean,

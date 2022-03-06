@@ -1,12 +1,12 @@
 <template>
   <div class="topnav">
     <router-link to="/" class="logo">
-      <svg class="pick-icon">
+      <svg class="pick-icon" v-if="toggleMenuButtonVisible">
         <use xlink:href="#icon-pig"></use>
       </svg>
     </router-link>
-    <ul class="menu">
-      <li><router-link to="/doc">Documnet</router-link></li>
+    <ul class="menu" v-if="!toggleMenuButtonVisible">
+      <li><router-link to="/doc">Documentation</router-link></li>
     </ul>
     <span
       v-if="toggleMenuButtonVisible"
@@ -62,6 +62,7 @@ $color: #007974;
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    font-size: 20px;
     > li {
       margin: 0 1em;
     }
@@ -77,7 +78,7 @@ $color: #007974;
       height: 32px;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     > .menu {
       display: none;
     }
