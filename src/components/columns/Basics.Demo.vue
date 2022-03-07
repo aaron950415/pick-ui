@@ -9,13 +9,3 @@ Example
     <Button class="column"  level="main">Fourth column</Button>
   </div>
 </template>
-<script lang="ts">
-import {
-  Button
-} from "../../lib/index";
-export default {
-  components: { Button },
-};
-</script>
-
-

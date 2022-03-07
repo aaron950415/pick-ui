@@ -13,13 +13,9 @@ Basic Use</demo>
 </template>
 
 <script lang="ts">
-import {
-  Tabs, Tab
-} from "../lib/index";
 import { ref } from "vue";
 
 export default {
-  components: { Tabs, Tab },
   setup() {
     const x = ref("nav1");
     return { x };

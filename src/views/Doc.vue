@@ -44,30 +44,16 @@ export default {
 
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
-    let toggleMenuButtonVisible =ref(true)
     let elementsVisible = ref({
       elements: false,
       columns:false
     });
 
-    onMounted(async () => {
-      window.addEventListener('resize', screenSizeChange)
-    })
     const changeVisibleStatus = (key,value) => {
       elementsVisible.value[key]=!value
       
     };
 
-    const screenSizeChange=()=>{
-      if(document.body.clientWidth <= 800){
-        asideVisible.value =false;
-      }else{
-        asideVisible.value =true
-      }
-    }
-    onUnmounted(() => {
-      window.removeEventListener('resize', screenSizeChange)
-    })
     return { asideVisible, elementsVisible, changeVisibleStatus };
   },
 };

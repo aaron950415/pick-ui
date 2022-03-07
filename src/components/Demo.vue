@@ -29,7 +29,6 @@ export default {
   },
   props: { component: Object },
   setup(props) {
-    console.log('item', props);
     const codeVisible = ref(false);
     const html = computed(() => {
       return Prism.highlight(

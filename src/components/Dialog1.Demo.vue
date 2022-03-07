@@ -22,10 +22,8 @@ Basic Use</demo>
 </template>
 
 <script lang="ts">
-import { Button, Dialog } from "../lib/index";
 import { ref } from "vue";
 export default {
-  components: { Dialog, Button },
   setup() {
     let x = ref(false);
     const toggle = () => {

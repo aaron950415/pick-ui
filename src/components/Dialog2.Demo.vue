@@ -8,14 +8,11 @@ Quick Settings</demo>
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
-import {
-  Button,
-  openDialog
-} from "../lib/index";
+  import { getCurrentInstance } from 'vue';
 export default {
-  components: { Button },
   setup() {
+    const currentInstance = getCurrentInstance()
+    const {openDialog}=currentInstance.appContext.config.globalProperties
     const showDialog = () => {
       openDialog({
         tittle: "tittle",
